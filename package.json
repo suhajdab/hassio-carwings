@@ -1,0 +1,14 @@
+{
+  "name": "carwings_hassio_server",
+  "version": "0.0.12",
+  "description": "Carwings Hassio add-on server",
+  "author": "Balazs Suhajda <balazs@onereason.eu>",
+  "license": "WTFPL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "carwings-mqtt-nodejs": "https://github.com/suhajdab/carwings-mqtt-nodejs.git"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Carwings add-on",
+  "version": "0.0.12",
+  "slug": "carwings",
+  "description": "Carwings add-on for Nissan Leaf",
+  "hassio_api": "yes",
+  "host_network": "yes",
+  "startup": "before",
+  "boot": "auto",
+  "map": [
+    "config:rw"
+  ],
+  "options": {
+    "username": null,
+    "password": null,
+    "regioncode": "NE",
+    "mqtt_server": "",
+    "mqtt_port": 1883,
+    "mqtt_username": null,
+    "mqtt_password": null,
+    "command_topic": "cmnd/carwings",
+    "telemetry_topic": "tele/carwings"
+  },
+  "schema": {
+    "username": "str",
+    "password": "str",
+    "regioncode": "match(^(NNA|NE|NCI|NMA|NML)$)",
+    "mqtt_server": "str",
+    "mqtt_port": "port",
+    "mqtt_username": "str",
+    "mqtt_password": "str",
+    "command_topic": "str",
+    "telemetry_topic": "str"
+  },
+  "ports": {
+    "8000/tcp": 8000
+  }
+}
